@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #d946ef; /* a romantic purple */
+      --accent-color: #ec4899; /* pink accent */
+      --background-color: #fdf1f7;
+      --input-bg: #fff0f6;
+      --error-color: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: linear-gradient(135deg, #fcb6d1, #f5e6f4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    #app {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255 255 255 / 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(220,69,239,0.2);
+      padding: 32px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #app h1 {
+      font-weight: 800;
+      font-size: 2.25rem;
+      background: linear-gradient(135deg, #d946ef, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+
+    .login-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(236,72,153,0.3);
+      border: 4px solid #ec4899;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #4b0c58;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1rem;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      background: var(--input-bg);
+      transition: border-color 0.3s ease;
+      color: #4b0c58;
+      outline-offset: 2px;
+      outline-color: transparent;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: var(--accent-color);
+      outline-color: var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    button {
+      padding: 14px 0;
+      background: linear-gradient(135deg, #d946ef, #ec4899);
+      border: none;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(236,72,153,0.33);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:hover,
+    button:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(236,72,153,0.45);
+      outline: none;
+    }
+
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    #home-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      color: #6b21a8;
+    }
+    #home-screen h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    #home-screen p {
+      font-size: 1.125rem;
+      max-width: 320px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div id="app" role="main" aria-label="Login form">
+    <h1>Welcome Back, Bebeluvs!</h1>
+    <img
+      src="Jas.jpeg"
+      alt="Heart shaped romantic image in purple and pink tones"
+      class="login-image"
+      loading="eager"
+      width="120"
+      height="120"
+    />
+    <form id="login-form" aria-describedby="error-msg" novalidate>
+      <div>
+        <label for="username">Your Sweetie's Name</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          autocomplete="username"
+          placeholder="Enter your name"
+          required
+          aria-required="true"
+        />
+      </div>
+      <div>
+        <label for="password"> Enter The day we became a couple</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="Enter your password"
+          required
+          aria-required="true"
+        />
+      </div>
+      <button type="submit" aria-label="Log in to your account">Unlock My Heart</button>
+      <div id="error-msg" class="error-message" role="alert" aria-live="assertive"></div>
+    </form>
+  </div>
+
+  <div id="home-screen" role="main" aria-label="Home screen welcome">
+    <h2>Welcome Home, Beloved!</h2>
+    <p>
+Bebeluvs,
+I just want to say how truly thankful I am that you became my partner. I’ve really enjoyed every moment we've shared—through the fun times, the laughter, and even the ups and downs we’ve been through together.
+
+Even with your flaws and quirks, I still love you so much. In fact, it's those little things that make you even more special to me.
+
+You’ve become such an important part of my life, and I honestly can’t imagine my future without you in it. You're the one I see myself with in the long run—the person I want to grow and build a life with.
+
+Thank you for everything—for your love, your patience, and for simply being you. I'm so lucky to have you. 💖
+
+<ul>
+      <li><a href="Picture.html">Next>></a></li></ul>
+</p>
+         
+
+  </div>
+
+  <script>
+    (() => {
+      const form = document.getElementById('login-form');
+      const errorMsg = document.getElementById('error-msg');
+      const app = document.getElementById('app');
+      const homeScreen = document.getElementById('home-screen');
+
+      // For demo purpose, we set fixed credentials:
+      // username: "love", password: "monthsary"
+      const validCredentials = {
+        username: 'bebeluvs',
+        password: 'May022023',
+      };
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        errorMsg.textContent = '';
+        const username = form.username.value.trim().toLowerCase();
+        const password = form.password.value.trim();
+
+        if (!username || !password) {
+          errorMsg.textContent = 'Please enter both username and password.';
+          return;
+        }
+
+        if (username === validCredentials.username && password === validCredentials.password) {
+          // Success: Show home screen
+          app.style.display = 'none';
+          homeScreen.style.display = 'flex';
+          homeScreen.focus && homeScreen.focus();
+        } else {
+          errorMsg.textContent = 'Invalid name or password. Please try again.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+

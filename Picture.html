@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Love Themed Single Column Design</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+    color: #4b2142;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 480px; /* typical mobile width for preview */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Card container */
+  .love-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255 255 255 / 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(203 106 172 / 0.3);
+    overflow: hidden;
+    gap: 16px;
+    padding: 16px;
+    transition: box-shadow 0.3s ease;
+  }
+  .love-card:hover, .love-card:focus-within {
+    box-shadow: 0 12px 24px rgba(203 106 172 / 0.6);
+  }
+  
+  .love-image {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e75480;
+    box-shadow: 0 4px 10px rgba(231 84 128 / 0.6);
+  }
+
+  .love-message {
+    flex: 1;
+    font-weight: 600;
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.4;
+    color: #6a2354;
+  }
+
+  /* Accessibility outline */
+  .love-card:focus-within {
+    outline: 3px solid #d14066;
+    outline-offset: 2px;
+  }
+
+  /* Responsive text scaling */
+  @media (max-width: 360px) {
+    .love-message {
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="love-card" tabindex="0" role="group" aria-label="Love message with picture">
+    <img 
+      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c118ee0-c094-4e65-ad21-4f6b40d30549.png" 
+      alt="A pink heart shape symbolizing love with soft glowing edges" 
+      class="love-image"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="love-message">
+      "Where there is love, there is life." – Mahatma Gandhi
+    </p>
+  </div>
+
+  <div class="love-card" tabindex="0" role="group" aria-label="Love message with picture">
+    <img 
+      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/16db1eb0-c215-4807-addf-406f3e9eb9a0.png" 
+      alt="A romantic abstract symbol formed with shades of red and pink" 
+      class="love-image"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="love-message">
+      "Love recognizes no barriers." – Maya Angelou
+    </p>
+  </div>
+
+  <div class="love-card" tabindex="0" role="group" aria-label="Love message with picture">
+    <img 
+      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1b356b81-6881-4202-8cf8-2233019fc7f4.png" 
+      alt="A stylized love icon with warm coral colors and smooth edges" 
+      class="love-image"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="love-message">
+      "Love is composed of a single soul inhabiting two bodies." – Aristotle
+    </p>
+  </div>
+<ul>
+      <li><a href="Video.html">Next>></a></li></ul>
+</body>
+</html>
+
+
+
+
+
+
+
